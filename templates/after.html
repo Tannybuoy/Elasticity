@@ -7,16 +7,17 @@
   <body bgcolor="a3cfb4">
     <center>
       <h1>PREDICTION</h1>
+      <h2>Hi {%print(name)%}</h2>
       {%if data==0%}
-      <h1>Does not have heart disease</h1>
-      <img src="https://assets.lybrate.com/imgs/dt/tp/1b2826163ac8ef0ad58ccd5a3193b3b1/9d17a870774d16466c33e854942ca7ff/24244c.jpg">
+      <h1>You do not have heart disease</h1>
+      <img src="https://assets.lybrate.com/imgs/dt/tp/1b2826163ac8ef0ad58ccd5a3193b3b1/9d17a870774d16466c33e854942ca7ff/24244c.jpg"  width="300" height="200">
 
       {%else%}
-      <h1>Have heart disease</h1>
-      <img src="https://www.pbmchealth.org/application/files/5815/8277/9095/PBMC_Qualities_That_Make_a_Good_Cardiologist_IMAGE1.jpeg" alt="heart">
+      <h1>You have a heart disease</h1>
+      <img src="https://www.pbmchealth.org/application/files/5815/8277/9095/PBMC_Qualities_That_Make_a_Good_Cardiologist_IMAGE1.jpeg" alt="heart"  width="300" height="200">
 
       {%endif%}
-      <br><br>
+      <br>
       <a href="/">Go back to home page</a>
     </center>
   </body>

@@ -14,12 +14,6 @@ import sklearn
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_absolute_error
-from sklearn.metrics import mean_squared_error
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.svm import SVC
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier
 import pickle
 
 heart = pd.read_csv('heart.csv')
@@ -51,7 +45,7 @@ y= df['target']
 x = (x_data - np.min(x_data)) / (np.max(x_data) - np.min(x_data)).values
 
 # Splitting the Dataset
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size= 0.2, random_state= 101)
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size= 0.2)
 
 # Instantiating LogisticRegression() Model
 lor = LogisticRegression()

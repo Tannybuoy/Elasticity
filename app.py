@@ -13,14 +13,15 @@ def man():
 @app.route("/predict", methods=['POST','GET'])
 def home():
     if request.method=='POST':
-        data1 = request.form['a']
-        data2 = request.form['b']
-        data3 = request.form['c']
-        data4 = request.form['d']
-        data5 = request.form['e']
+        data=request.form['nm']
+        data1 = int(request.form['a'])
+        data2 = int(request.form['b'])
+        data3 = int(request.form['c'])
+        data4 = int(request.form['d'])
+        data5 = int(request.form['e'])
         arr=np.array([[data1, data2, data3, data4, data5]])
         pred=model.predict(arr)
-        return render_template("after.html", data=pred)
+        return render_template("after.html", data=pred, name=data)
     else:
         return render_template("index.html")
 
