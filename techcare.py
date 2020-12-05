@@ -23,7 +23,6 @@ from sklearn.ensemble import RandomForestClassifier
 import pickle
 
 heart = pd.read_csv('heart.csv')
-heart.head()
 
 """Data headings and description
 
@@ -44,19 +43,6 @@ heart.head()
 """
 
 df = heart[['age','sex', 'trestbps','chol', 'fbs', 'target']]
-df.head()
-
-sns.pairplot(df, hue= 'target')
-
-sns.countplot(x="target", data=df)
-plt.show()
-
-noheart=len(df[df.target==0])
-print(noheart)
-
-haveheart=len(df[df.target==1])
-print(haveheart)
-
 # Variables
 x_data= df.drop(labels= 'target', axis= 1)
 y= df['target']
