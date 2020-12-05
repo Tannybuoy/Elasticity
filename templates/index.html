@@ -1,5 +1,22 @@
-{% extends "base.html" %}
-{% block title %}Home Page{% endblock %}
-{% block content %}
-<h1>Test</h1>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body bgcolor="d4a3ae">
+    <center>
+      <h1>HEART DISEASE DETECTION</h1>
+      <form method="POST" action="{{url_for('home')}}">
+        <p>Name: <input type="text" name="nm", placeholder="Enter name"></p><br><br>
+        <p>Age: <input type="text" name="a", placeholder="Enter age"></p><br><br>
+        <p>Sex: <input type="text" name="b", placeholder="Enter sex"></p><br><br>
+        <p>Blood pressure: <input type="text" name="c", placeholder="in mg/dl"></p><br><br>
+        <p>Cholestrol: <input type="text" name="d", placeholder="in mg/dl"></p><br><br>
+        <p>Fasting Blood Sugar Level: <input type="text" name="e", placeholder="in mg/dl"></p><br><br>
+        <p><input type="submit" value="predict"></p>
+      </form>
+      <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/slideshows/did_you_know_this_could_lead_to_heart_disease_slideshow/650x350_did_you_know_this_could_lead_to_heart_disease_slideshow.jpg" alt="heart">
+    </center>
+  </body>
+</html>

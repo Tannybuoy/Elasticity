@@ -20,13 +20,9 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
+import pickle
 
-from google.colab import drive
-drive.mount('/content/drive')
-
-cd /content/drive/My Drive/Colab Notebooks
-
-heart = pd.read_csv('heart.csv')  
+heart = pd.read_csv('heart.csv')
 heart.head()
 
 """Data headings and description
@@ -68,7 +64,7 @@ y= df['target']
 #Data Normalisation
 x = (x_data - np.min(x_data)) / (np.max(x_data) - np.min(x_data)).values
 
-# Splitting the Dataset 
+# Splitting the Dataset
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size= 0.2, random_state= 101)
 
 # Instantiating LogisticRegression() Model
@@ -77,115 +73,18 @@ lor = LogisticRegression()
 # Training/Fitting the Model
 lor.fit(x_train,y_train)
 
-# Making Predictions
-lor.predict(x_test)
-pred = lor.predict(x_test)
-
-#Accuracy of the model
-acc = lor.score(x_test,y_test)*100
-
-print("Test Accuracy {:.2f}%".format(acc))
-
-# Evaluating Model's Performance
-print('Mean Absolute Error:', mean_absolute_error(y_test, pred))
-print('Mean Squared Error:', mean_squared_error(y_test, pred))
-print('Mean Root Squared Error:', np.sqrt(mean_squared_error(y_test, pred)))
-
-# Instantiating KNeighborsClassifier() Model
-knn = KNeighborsClassifier(n_neighbors = 2) 
-
-# Training/Fitting the Model
-knn.fit(x_train, y_train)
+pickle.dump(lor, open('iri.pkl', 'wb'))
 
 # Making Predictions
-knn.predict(x_test)
-pred = knn.predict(x_test)
+#lor.predict(x_test)
+#pred = lor.predict(x_test)
 
 #Accuracy of the model
-acc = knn.score(x_test,y_test)*100
+#acc = lor.score(x_test,y_test)*100
 
-print("Test Accuracy {:.2f}%".format(acc))
-
-# Evaluating Model's Performance
-print('Mean Absolute Error:', mean_absolute_error(y_test, pred))
-print('Mean Squared Error:', mean_squared_error(y_test, pred))
-print('Mean Root Squared Error:', np.sqrt(mean_squared_error(y_test, pred)))
-
-# try to find best k value
-scoreList = []
-for i in range(1,20):
-    knn2 = KNeighborsClassifier(n_neighbors = i)  # n_neighbors means k
-    knn2.fit(x_train, y_train)
-    scoreList.append(knn2.score(x_test, y_test))
-    
-plt.plot(range(1,20), scoreList)
-plt.xticks(np.arange(1,20,1))
-plt.xlabel("K value")
-plt.ylabel("Score")
-plt.show()
-
-acc = max(scoreList)*100
-maxpos = scoreList.index(max(scoreList))+1
-accuracies['KNN'] = acc
-print("Maximum KNN Score is {:.2f}% at the nearest neighbours value {}".format(acc, maxpos))
-
-# Instantiating SVC() Model
-svm = SVC(random_state = 1)
-
-# Training/Fitting the Model
-svm.fit(x_train, y_train)
-
-# Making Predictions
-svm.predict(x_test)
-pred = svm.predict(x_test)
-
-#Accuracy of the model
-acc = svm.score(x_test,y_test)*100
-
-print("Test Accuracy {:.2f}%".format(acc))
+#print("Test Accuracy {:.2f}%".format(acc))
 
 # Evaluating Model's Performance
-print('Mean Absolute Error:', mean_absolute_error(y_test, pred))
-print('Mean Squared Error:', mean_squared_error(y_test, pred))
-print('Mean Root Squared Error:', np.sqrt(mean_squared_error(y_test, pred)))
-
-# Instantiating DecisionTreeClassifier() Model
-dtc = DecisionTreeClassifier()
-
-# Training/Fitting the Model
-dtc.fit(x_train, y_train)
-
-# Making Predictions
-dtc.predict(x_test)
-pred = dtc.predict(x_test)
-
-#Accuracy of the model
-acc = dtc.score(x_test,y_test)*100
-
-print("Test Accuracy {:.2f}%".format(acc))
-
-# Evaluating Model's Performance
-print('Mean Absolute Error:', mean_absolute_error(y_test, pred))
-print('Mean Squared Error:', mean_squared_error(y_test, pred))
-print('Mean Root Squared Error:', np.sqrt(mean_squared_error(y_test, pred)))
-
-# Instantiating RandomForestClassifier() Model
-rf = RandomForestClassifier(n_estimators = 1000, random_state = 101)
-
-# Training/Fitting the Model
-rf.fit(x_train, y_train)
-
-# Making Predictions
-rf.predict(x_test)
-pred = rf.predict(x_test)
-
-#Accuracy of the model
-acc = rf.score(x_test,y_test)*100
-
-print("Test Accuracy {:.2f}%".format(acc))
-
-# Evaluating Model's Performance
-print('Mean Absolute Error:', mean_absolute_error(y_test, pred))
-print('Mean Squared Error:', mean_squared_error(y_test, pred))
-print('Mean Root Squared Error:', np.sqrt(mean_squared_error(y_test, pred)))
-
+#print('Mean Absolute Error:', mean_absolute_error(y_test, pred))
+#print('Mean Squared Error:', mean_squared_error(y_test, pred))
+#print('Mean Root Squared Error:', np.sqrt(mean_squared_error(y_test, pred)))
