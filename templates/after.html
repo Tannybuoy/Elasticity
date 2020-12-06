@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8">
-  <title>Humans are Sharks</title>
-  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>Humans are Sharks</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/style.css')}}">
+  </head>
 
-<body bgcolor="a3cfb4">
-    <center>
-      <h1>PREDICTION</h1>
-      <h2>Hi {%print(name)%}</h2>
-      {%if data==0%}
-      <h1>You do not have heart disease</h1>
-      <img src="https://assets.lybrate.com/imgs/dt/tp/1b2826163ac8ef0ad58ccd5a3193b3b1/9d17a870774d16466c33e854942ca7ff/24244c.jpg"  width="300" height="200">
+  <body>
+    <!---Underwater animation--->
+    <section>
+      <div class="container">
+            <center>
+              <h1>PREDICTION</h1>
+              <h2>Hi {%print(name)%}</h2>
+              {%if data==0%}
+              <h1>You do not have heart disease</h1>
+              <img src="https://assets.lybrate.com/imgs/dt/tp/1b2826163ac8ef0ad58ccd5a3193b3b1/9d17a870774d16466c33e854942ca7ff/24244c.jpg"  width="300" height="200">
 
-      {%else%}
-      <h1>You have a heart disease</h1>
-      <img src="https://www.pbmchealth.org/application/files/5815/8277/9095/PBMC_Qualities_That_Make_a_Good_Cardiologist_IMAGE1.jpeg" alt="heart"  width="300" height="200">
+              {%else%}
+              <h1>You have a heart disease</h1>
+              <img src="https://www.pbmchealth.org/application/files/5815/8277/9095/PBMC_Qualities_That_Make_a_Good_Cardiologist_IMAGE1.jpeg" alt="heart"  width="300" height="200">
 
-      {%endif%}
-      <br>
-      <a href="/">Go back to home page</a>
-    </center>
+              {%endif%}
+              <br>
+              <a href="/">Go back to home page</a>
+            </center>
+      </div>
+      <div id="particles">
+        <img src="{{url_for('static', filename='img/fish1.png')}}" class="fish fish1">
+        <img src="{{url_for('static', filename='img/fish2.png')}}" class="fish fish2">
+        <img src="{{url_for('static', filename='img/fish3.png')}}" class="fish fish3">
+        <img src="{{url_for('static', filename='img/fish4.png')}}" class="fish fish4">
+        <img src="{{url_for('static', filename='img/fish5.png')}}" class="fish fish5">
+        <img src="{{url_for('static', filename='img/diver.png')}}" class="diver">
+      </div>
+    </section>
+    <script type="text/javascript" src="{{url_for('static', filename='js/particles.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='js/app.js')}}"></script>
   </body>
 </html>
