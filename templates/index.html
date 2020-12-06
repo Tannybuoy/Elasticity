@@ -9,19 +9,24 @@
   <body>
     <!---Underwater animation--->
     <section>
-      <div class="container">
+      <div class="body-particles">
+        <!-- Wrapper -->
         <center>
-          <h1>HEART DISEASE DETECTION</h1>
-          <form method="POST" action="{{url_for('home')}}">
-            <b>Name: <input type="text" name="nm", placeholder="Enter name"><br><br>
-            <b>Age: <input type="text" name="a", placeholder="Enter age"><br><br>
-            <b>Sex: <input type="text" name="b", placeholder="1 for male, 0 for female"><br><br>
-            <b>Blood pressure: <input type="text" name="c", placeholder="in mg/dl"><br><br>
-            <b>Cholestrol: <input type="text" name="d", placeholder="in mg/dl"><br><br>
-            <b>Fasting Blood Sugar Level: <input type="text" name="e", placeholder="in mg/dl"><br><br>
-            <p><input type="submit" value="predict"></p>
-          </form>
-          <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/slideshows/did_you_know_this_could_lead_to_heart_disease_slideshow/650x350_did_you_know_this_could_lead_to_heart_disease_slideshow.jpg" alt="heart" width="300" height="200">
+        <div id="wrapper">
+
+            <h1>HEART DISEASE DETECTION</h1>
+            <form method="POST" action="{{url_for('home')}}">
+              <b>Name: <input type="text" name="nm", placeholder="Enter name"><br><br>
+              <b>Age: <input type="text" name="a", placeholder="Enter age"><br><br>
+              <b>Sex: <input type="text" name="b", placeholder="1 for male, 0 for female"><br><br>
+              <b>Blood pressure: <input type="text" name="c", placeholder="in mg/dl"><br><br>
+              <b>Cholestrol: <input type="text" name="d", placeholder="in mg/dl"><br><br>
+              <b>Fasting Blood Sugar Level: <input type="text" name="e", placeholder="in mg/dl"><br><br>
+              <p><input type="submit" value="predict"></p>
+            </form>
+            <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/slideshows/did_you_know_this_could_lead_to_heart_disease_slideshow/650x350_did_you_know_this_could_lead_to_heart_disease_slideshow.jpg" alt="heart" width="300" height="200">
+
+        </div>
         </center>
       </div>
       <div id="particles">
@@ -30,7 +35,9 @@
         <img src="{{url_for('static', filename='img/fish3.png')}}" class="fish fish3">
         <img src="{{url_for('static', filename='img/fish4.png')}}" class="fish fish4">
         <img src="{{url_for('static', filename='img/fish5.png')}}" class="fish fish5">
-        <img src="{{url_for('static', filename='img/diver.png')}}" class="diver">
+        <img src="{{url_for('static', filename='img/diver1.png')}}" class="diver1">
+        <img src="{{url_for('static', filename='img/diver2.png')}}" class="diver2">
+        <img src="{{url_for('static', filename='img/grass.png')}}" class="grass">
       </div>
     </section>
     <script type="text/javascript" src="{{url_for('static', filename='js/particles.js')}}"></script>
