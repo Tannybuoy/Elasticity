@@ -1,6 +1,13 @@
 # Hearts of Sharks
 SharkHack 2020
 
+
+## Inspiration
+These will work in anaconda prompt. Please follow the corresponding instructions for linux.
+1. Clone the respository using `git clone https://github.com/Tannybuoy/HeartsofSharks
+2. Redirect to that repository using `cd/Documents/GitHub/HeartsofSharks`, or whatever the route is in your Desktop
+3. Type `python "app.py"` to open the website in your browser
+
 ## Inspiration
 Due to the fear of hospitals caused because of growing COVID19 cases, people have stopped visiting hospitals. This has led to reduction in detection and prognosis of diseases which require expertise of doctors, like cancers, heart diseases and more. It is the need of the hour for people to be able to detect whether they have a disease or not by sitting at home. 
 
