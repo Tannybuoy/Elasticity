@@ -53,10 +53,10 @@ section
 }
 .diver
 {
-  top: 60%;
+  position: absolute;
+  top: 10%;
   height: 50px;
-  animation: animate 18s linear infinite;
-  opacity: 0.5;
+  animation: animate 35s linear infinite;
 }
 @keyframes animate
 {
