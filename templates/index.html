@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Humans are Sharks</title>
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/style.css')}}">
   </head>
 
   <body>
@@ -13,12 +13,12 @@
         <center>
           <h1>HEART DISEASE DETECTION</h1>
           <form method="POST" action="{{url_for('home')}}">
-            <p>Name: <input type="text" name="nm", placeholder="Enter name"></p><br>
-            <p>Age: <input type="text" name="a", placeholder="Enter age"></p><br>
-            <p>Sex: <input type="text" name="b", placeholder="1 for male, 0 for female"></p><br>
-            <p>Blood pressure: <input type="text" name="c", placeholder="in mg/dl"></p><br>
-            <p>Cholestrol: <input type="text" name="d", placeholder="in mg/dl"></p><br>
-            <p>Fasting Blood Sugar Level: <input type="text" name="e", placeholder="in mg/dl"></p>
+            <b>Name: <input type="text" name="nm", placeholder="Enter name"><br><br>
+            <b>Age: <input type="text" name="a", placeholder="Enter age"><br><br>
+            <b>Sex: <input type="text" name="b", placeholder="1 for male, 0 for female"><br><br>
+            <b>Blood pressure: <input type="text" name="c", placeholder="in mg/dl"><br><br>
+            <b>Cholestrol: <input type="text" name="d", placeholder="in mg/dl"><br><br>
+            <b>Fasting Blood Sugar Level: <input type="text" name="e", placeholder="in mg/dl"><br><br>
             <p><input type="submit" value="predict"></p>
           </form>
           <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/slideshows/did_you_know_this_could_lead_to_heart_disease_slideshow/650x350_did_you_know_this_could_lead_to_heart_disease_slideshow.jpg" alt="heart" width="300" height="200">
