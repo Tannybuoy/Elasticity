@@ -2,7 +2,7 @@
 SharkHack 2020
 
 
-## Inspiration
+## Running the Code
 These will work in anaconda prompt. Please follow the corresponding instructions for linux.
 1. Clone the respository using `git clone https://github.com/Tannybuoy/HeartsofSharks
 2. Redirect to that repository using `cd/Documents/GitHub/HeartsofSharks`, or whatever the route is in your Desktop
