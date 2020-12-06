@@ -29,7 +29,7 @@ So much. First of all I learnt to tackle college assignment deadline and hackath
 
 ## Failures 
 * Two attempts were made to deploy the app on Google Cloud but they ended up being unsuccessful.
-* Wanted to get my hands dirty with HTML and CSS in more detail but time ended up being a constrain
+* Wanted to get my hands dirty with HTML and CSS in more detail but time was a constraint
 
 ## What's next for Hearts of Sharks
 * Improving the accuracy of the model by using deep learning models. 
