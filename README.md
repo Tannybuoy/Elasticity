@@ -37,5 +37,11 @@ So much. First of all I learnt to tackle college assignment deadline and hackath
 * Working on the UI design of the website and making it more interactive and informative
 * Deploying it on a website as well as making it available through a mobile app
 
-Youtube Link: https://youtu.be/xy0R0gXD8DY
-Deploying on GCP Tutorial followed: https://www.youtube.com/watch?v=RbejfDTHhhg
+## Youtube Link
+https://youtu.be/xy0R0gXD8DY
+
+## Tutorials Followed
+* Deploying on GCP Tutorial followed: https://www.youtube.com/watch?v=RbejfDTHhhg
+* Deploy Machine Learning model Flask: https://www.youtube.com/watch?v=i3RMlrx4ol4
+* Underwater Scene Animation Effects using Particle.js: https://www.youtube.com/watch?v=LV8rYCmbmOo
+
