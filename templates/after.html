@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body bgcolor="a3cfb4">
+<head>
+  <meta charset="utf-8">
+  <title>Humans are Sharks</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body bgcolor="a3cfb4">
     <center>
       <h1>PREDICTION</h1>
       <h2>Hi {%print(name)%}</h2>
@@ -20,5 +28,16 @@
       <br>
       <a href="/">Go back to home page</a>
     </center>
+        <!---Footer----->
+    <section id="footer">
+      <div class="container text-center">
+        <p>Made with <i class="fa fa-heart-o"></i> by heartsofsharks.com</p>
+      </div>
+    </section>
+    <!---Footer Close------>
+    <script src="{{url_for('static', filename='js/smooth-scroll.js')}}"></script>
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
   </body>
 </html>
