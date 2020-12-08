@@ -9,8 +9,9 @@
   <body>
     <!---Underwater animation--->
     <section>
-      <div class="container">
+      <div class="body-particles">
             <center>
+            <div id="wrapper">
               <h1>PREDICTION</h1>
               <h2>Hi {%print(name)%}</h2>
               {%if data==0%}
@@ -24,7 +25,9 @@
               {%endif%}
               <br>
               <a href="/">Go back to home page</a>
+              </div>
             </center>
+
       </div>
       <div id="particles">
         <img src="{{url_for('static', filename='img/fish1.png')}}" class="fish fish1">
